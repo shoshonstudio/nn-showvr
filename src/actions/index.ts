@@ -27,6 +27,22 @@ export const addData = async (table:string, values:any):Promise<any> => {
     return {success:"Item added successfully!"};
 }
 
+export const updateRecord = async (id:number, values:any):Promise<any> => {
+    try {
+        await prisma.post.update({
+            where:{
+                id:id
+            },
+            data:values
+        });  
+        revalidatePath('/post')
+    } catch (error) {
+        console.error(error)
+        return {error: error};
+    }
+    return {success:"Item updated successfully!"};
+}
+
 export const deleteRecord = async (id:number):Promise<any> => {
     try {
         await prisma.post.delete({
