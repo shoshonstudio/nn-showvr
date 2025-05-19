@@ -1,12 +1,8 @@
 import DeleteButton from '@/components/DeleteButton'
 import NewPostForm from '@/components/NewPostForm'
 import { Card, CardContent } from '@/components/ui/card'
-import prisma from '@/lib/db'
+import { prisma } from '@/lib/db'
 import React from 'react'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger } from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
-import { Edit, PlusIcon } from 'lucide-react'
-import { DialogTitle } from '@radix-ui/react-dialog'
 import UpdateDialog from '@/components/UpdateDialog'
 
 const PostsPage = async () => {
