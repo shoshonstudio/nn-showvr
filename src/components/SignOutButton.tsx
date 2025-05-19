@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { authClient } from "@/lib/auth-client";
 import { Loader2, LogOut } from "lucide-react";
 
-export default function SignoutButton({tenant}:{tenant?:string}) {
+export default function SignoutButton() {
 	const router = useRouter();
 	const [pending, setPending] = useState(false);
 

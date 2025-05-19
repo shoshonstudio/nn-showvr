@@ -3,7 +3,7 @@
 import { prisma } from "@/lib/db"
 import { revalidatePath } from "next/cache";
 
-export const getData = async (table:string, id?:string):Promise<any> => {
+export const getData = async ():Promise<any> => {
     try {
         const data = await prisma.post.findMany()
         return data;

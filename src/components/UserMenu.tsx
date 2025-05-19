@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { LogOut } from 'lucide-react'
+// import { LogOut } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import SignoutButton from '@/components/SignOutButton'
@@ -10,6 +10,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Session } from '@/types/auth-types'
 
 const UserMenu = ({session, tenant}:{session:Session | null; tenant?:string}) => {
+
+  if(tenant){
+    console.log(tenant.slice(1))
+  }
 
   return (
   <DropdownMenu>
@@ -33,7 +37,7 @@ const UserMenu = ({session, tenant}:{session:Session | null; tenant?:string}) =>
             )
             }
           <DropdownMenuSeparator />
-            <DropdownMenuItem className='flex justify-between py-0'><SignoutButton tenant={tenant}/></DropdownMenuItem>
+            <DropdownMenuItem className='flex justify-between py-0'><SignoutButton /></DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
   )

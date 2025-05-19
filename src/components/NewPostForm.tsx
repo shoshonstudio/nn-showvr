@@ -25,7 +25,7 @@ const NewPostForm = ({record,formAction,pending}:{record?:any,formAction?:any,pe
         }),
     })
 
-    let form = useForm<z.infer<typeof formSchema>>({
+   const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: record ?? {
             title: '',

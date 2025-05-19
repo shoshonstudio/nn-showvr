@@ -14,7 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 
 const formSchema = z.object({
   email: z.string().email().min(2, {

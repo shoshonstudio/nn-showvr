@@ -3,9 +3,9 @@ import { Button } from './ui/button'
 import { Library, LogIn, Plug } from 'lucide-react'
 import Link from 'next/link'
 import UniDialog from './uniComponents/UniDialog'
-import SessionList from './SessionList'
+// import SessionList from './SessionList'
 import EmailSignInForm from './auth/EmailSignInForm'
-import SocialSignInForm from './auth/SocialSignInForm'
+// import SocialSignInForm from './auth/SocialSignInForm'
 import { prisma } from '@/lib/db'
 
 const MainNavigation = async () => {
