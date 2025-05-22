@@ -46,15 +46,16 @@ const SignInForm = () => {
 			{
 				onRequest: () => {
 					setPending(true);
+					toast("Please wait...");
 				},
 				onSuccess: () => {
-					toast("Login successful. Redirecting to dashboard...");
+					toast.info("Login successful. Redirecting to dashboard...");
 					// router.replace('/verify-email?email='+values.email)
 					router.replace(`/dashboard`)
 				},
 				onError: (ctx) => {
+					toast.error(ctx.error.message ?? "Something went wrong.");
 					console.log("error", ctx);
-					toast(ctx.error.message ?? "Something went wrong.");
 				},
 			}
 		);

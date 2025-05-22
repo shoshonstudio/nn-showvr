@@ -27,10 +27,6 @@ export default async function Home() {
       <footer className="row-start-4 flex gap-[1px] flex-wrap items-center justify-center text-background/70 text-sm tracking-widest drop-shadow-md">
         <Link href="http://www.shoshonstudio.com">&copy; 2020 SHOSHONstudio</Link>
       </footer>
-
-        {session?.user && <div className='fixed top-2 right-2 border-2 rounded-full bg-background'>
-            <UserMenu session={session} tenant={''} />
-        </div>} 
     </main>
   )
 }
