@@ -12,8 +12,6 @@ import SessionList from './SessionList'
 const MainNavigation = async () => {
     const result = await prisma.post.findFirst()
 
-    console.log(result)
-
   return (
     <div className='flex flex-col justify-center gap-2 blur-xs group-hover:blur-none h-24 group-hover:h-58 overflow-hidden transition-all'>
         <h1 className={`py-4 font-[family-name:var(--font-audiowide)] text-5xl delay-400 tracking-tight group-hover:tracking-widest transition-all select-none text-center`}><span className="text-background">show</span>VR</h1>
